@@ -1,0 +1,35 @@
+{
+    "name": "Super Duper Siege",
+    "roles": [
+        {
+            "title": "UX Lead",
+            "page": ""
+        },
+        {
+            "title": "Tech Lead",
+            "page": ""
+        },
+        {
+            "title": "Producer",
+            "page": ""
+        }        
+    ],
+    "___funFacts": "30k Copies Sold & IGF Finalist",
+    "stats": [
+        {
+            "name": "Duration",
+            "value": "April 2026 - Present"
+        },
+        {
+            "name": "Team Size",
+            "value": "8 Person Team"
+        },
+        {
+            "name": "Tools",
+            "value": "Unity, C#, Figma, Trello"
+        }
+    ],
+    "steamAppId": "4698100",
+    "steamDemoAppId": "5109660",
+    "landingPageLogoOffset": 20
+}

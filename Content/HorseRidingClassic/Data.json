@@ -1,0 +1,29 @@
+{
+    "name": "Horse Riding Classic",
+    "roles": [
+        {
+            "title": "UX Designer",
+            "page": ""
+        },
+        {
+            "title": "Gameplay Programming",
+            "page": ""
+        }
+    ],
+    "funFacts": "Developed and released in a month",
+    "stats": [
+        {
+            "name": "Duration",
+            "value": "Jan - Feb 2026"
+        },
+        {
+            "name": "Team Size",
+            "value": "6 Person Team"
+        },
+        {
+            "name": "Tools",
+            "value": "Unity, C#, Figma, Trello"
+        }
+    ],
+    "steamAppId": "4384880"
+}

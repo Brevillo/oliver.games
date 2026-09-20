@@ -1,0 +1,254 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-color: #bf2651;
+    --primary-color-hover: #f63068;
+    
+    --primary-color-dark: hsl(331, 71%, 27%);
+
+    --darken: linear-gradient(
+        to top,
+        hsla(253, 100%, 5%, 90%),
+        hsla(253, 100%, 5%, 90%) 30%,
+        hsla(253, 100%, 5%, 0%) 100%);
+
+    --transition-duration: 0.2s;
+    --transition-duration-2: 0.35s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+body {
+    color:hsl(0, 0%, 100%);
+    font-family: 'Figtree', sans-serif;
+
+    background-color: black;
+}
+
+.page {
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.button,
+.button:link,
+.button:visited {
+    display: flex;
+    flex-shrink: 1;
+    text-decoration: none;
+    
+    justify-content: center;
+
+    background-color: var(--primary-color);
+    color: white;
+    
+    width: fit-content;
+    padding: 5px 8px;
+
+    position: relative;
+
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 0px;
+    border-bottom-width: 2px;
+    border-color: hsla(0, 0%, 100%, 80%);
+
+    transform-origin: bottom;
+
+    transition:
+        transform var(--transition-duration),
+        border-bottom-width var(--transition-duration);
+}
+
+.button.fill {
+    width: 100%;
+}
+
+.button:hover,
+.button:visited:hover {
+    background-color: var(--primary-color-hover);
+
+    transform: translate(0px, -3px);
+    border-bottom-width: 2px;
+}
+
+.button:active,
+.button:visited:active {
+    background-color: rgb(71, 71, 71);
+}
+
+.header {
+    background: linear-gradient(0deg, var(--primary-color), var(--primary-color-dark));
+    /* background: radial-gradient(ellipse at bottom, var(--primary-color), var(--primary-color-dark)); */
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.name {
+    font-size: 80px;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.role {
+    font-size: 50px;
+    font-variation-settings: "wght" 300;
+    
+    margin: 0px 50px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.specific-roles {
+    font-size: 20px;
+}
+
+.project-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+}
+
+/* ------------------ Project Grid Entry ------------------*/
+
+.project-grid-entry {
+    
+    background-color: var(--primary-color);
+    
+    height: 560px;
+    width: 400px;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: width var(--transition-duration);
+
+    border-radius: 5px;
+
+    box-shadow: 0px 0px 0px #f63068;
+
+    transition:
+        translate var(--transition-duration),
+        box-shadow var(--transition-duration);
+}
+
+.project-grid-entry:hover {
+    box-shadow: 0px 0px 10px #f63068;
+}
+
+.project-grid-entry .background {
+    width: 100%;
+    height: 100%;
+
+    transition: transform var(--transition-duration-2);
+}
+
+.project-grid-entry:hover > .background {
+    transform: scale(1.05);
+}
+
+/* Logo */
+
+    .project-grid-entry .logo {
+        
+        --logo-top-offset: 50px;
+
+        position: absolute;
+        width: 95%;
+        top: var(--logo-top-offset);
+        left: 50%;
+        transform: translateX(-50%);
+        justify-self: center;
+
+        transition: top var(--transition-duration-2)
+    }
+
+    .project-grid-entry:hover > .logo {
+        top: calc(var(--logo-top-offset) - 10px);
+    }
+
+.project-grid-entry .hover-info {
+    
+    opacity: 0%;
+
+    background-image: var(--darken);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    gap: 10px;
+    
+    padding: 20px;
+    
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-end;
+    
+    translate: 0px 30px;
+
+    transition:
+        opacity var(--transition-duration),
+        translate var(--transition-duration);
+}
+
+.project-grid-entry:hover > .hover-info {
+    opacity: 100%;
+    translate: 0px 0px;
+}
+
+.project-grid-entry .roles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px
+}
+
+.project-grid-entry .fun-fact {
+    /* padding: 5px;; */
+}
+
+.project-grid-entry .stats {
+    display: flex;
+
+    background-color: hsla(0, 0%, 100%, 50%);
+
+    padding: 10px;
+    margin: 5px 0px;
+    
+    border-radius: 10px;
+    border-color: red;
+    border-width: 5px;
+}
+
+/* Stats */
+
+    .project-grid-entry .stats div {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .project-grid-entry .stats .names {
+        text-align: start;
+        width: 80px;
+    }
+
+    .project-grid-entry .stats .values {
+        text-align: end;
+        flex-grow: 1;
+    }

@@ -1,0 +1,33 @@
+{
+    "name": "Sip Fisher",
+    "roles": [
+        {
+            "title": "UX Lead",
+            "page": ""
+        },
+        {
+            "title": "Tech Lead",
+            "page": ""
+        },
+        {
+            "title": "Producer",
+            "page": ""
+        }        
+    ],
+    "funFacts": "30k Copies Sold & IGF Finalist",
+    "stats": [
+        {
+            "name": "Duration",
+            "value": "May - Aug 2025"
+        },
+        {
+            "name": "Team Size",
+            "value": "8 Person Team"
+        },
+        {
+            "name": "Tools",
+            "value": "Unity, C#, Figma, Trello"
+        }
+    ],
+    "steamAppId": "3680510"
+}

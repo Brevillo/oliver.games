@@ -1,0 +1,34 @@
+{
+    "name": "UnDuster",
+    "roles": [
+        {
+            "title": "Producer",
+            "page": ""
+        },
+        {
+            "title": "UX Lead",
+            "page": ""
+        },
+        {
+            "title": "Tech Lead",
+            "page": ""
+        }
+    ],
+    "funFacts": "First Commercial Release",
+    "stats": [
+        {
+            "name": "Duration",
+            "value": "Nov 2023 - Nov 2024"
+        },
+        {
+            "name": "Team Size",
+            "value": "5 Person Team"
+        },
+        {
+            "name": "Tools",
+            "value": "Unity, C#"
+        }
+    ],
+    "steamAppId": "2753920",
+    "steamDemoAppId": "3283040"
+}
