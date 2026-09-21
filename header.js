@@ -3,9 +3,15 @@ const rootPath = document.currentScript.dataset.rootPath;
 build();
 
 async function build() {
+
+    const base = document.createElement("base");
+    base.href = rootPath;
+    document.head.append(base);
     
     const headerHtml = await (await fetch(`${rootPath}header.html`)).text();
     document.getElementById("header").innerHTML = headerHtml;
+
+    base.href = "";
 
     linkStylesheet(`${rootPath}style.css`);
     linkStylesheet(`${rootPath}header.css`);
