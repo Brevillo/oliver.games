@@ -6,6 +6,7 @@ async function build() {
 
     const base = document.createElement("base");
     base.href = rootPath;
+    console.log("adding base...");
     document.head.append(base);
     
     const headerHtml = await (await fetch(`${rootPath}header.html`)).text();
