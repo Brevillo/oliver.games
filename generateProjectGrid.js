@@ -29,13 +29,8 @@ async function displayProject(project, template) {
 
     const logo = cardContainer.querySelector(".logo");
     logo.setAttribute("src", `Content/${path}/Logo.png`);
-
-    // console.log(logo);
-    // console.log(logo instanceof HTMLElement);
-    // console.log(logo.style);
     
     if (data.landingPageLogoOffset) {
-        console.log("booyah");
         logo.style.setProperty("--logo-top-offset", `${data.landingPageLogoOffset}px`);
     }
 

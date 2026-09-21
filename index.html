@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <script src="generate.js"></script>
+    <script src="generateProjectGrid.js"></script>
+    <script src="buildHeader.js"></script>
 
     <head>
-        <meta = charset="UTF-8">
+        <meta charset="UTF-8">
         <title>Oliver Beebe</title>
         <link rel="icon" type="image/x-icon" href="Brevillo.gif">
         <link rel="stylesheet" href="style.css">
-        <link rel=""stylesheet" href="https://fonts.googleapis.com/css?family=Figtree">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Figtree">
     </head>
     <body>
-        <div class="header">
-            <div class="name">oliver beebe</div>
-            <div class="role">
-                Game Developer
-                <div class="specific-roles">UX Design • Technical Design • Leadership</div>
-            </div>
-        </div>
+        <div id="header"></div>
         <div class="page">
+            <div class="introduction">
+                <div>
+                    <p>Hello and welcome to my site!</p>
+                    <p>I'm an indie game developer from Washington state.</p>
+                    <p>I'm also a senior DigiPen game design student studying UX and technical design.</p>
+                </div>
+                <img src="SelfPortrait.png">
+            </div>
             <div id="project-grid" class="project-grid-container"></div>
         </div>
     </body>
