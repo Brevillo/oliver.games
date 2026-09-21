@@ -9,7 +9,7 @@ internal class Project(string name)
         string pageHtml = File.ReadAllText($"../Templates/projectPage.html")
             .Replace("data-project=\"\"", $"data-project=\"{name}\"");
         
-        File.WriteAllText($"../Content/{name}/index.html", pageHtml);
+        File.WriteAllText($"../{name}.html", pageHtml);
         
         Console.WriteLine($"- Generated html for {name}");
     }

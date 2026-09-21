@@ -24,7 +24,7 @@ async function displayProject(project, template) {
     
     const [path, data] = project;
     
-    const projectPagePath = `Content/${path}/index.html`;
+    const projectPagePath = `${path}.html`;
 
     const cardContainer = document.createElement("div");
     cardContainer.innerHTML = template;

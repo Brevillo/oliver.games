@@ -1,15 +1,12 @@
-const rootPath = document.currentScript.dataset.rootPath;
 
 build();
 
 async function build() {
 
-    const base = document.createElement("base");
-    base.href = rootPath;
-    console.log("adding base...");
-    document.head.append(base);
+    const head = await (await fetch('head.html')).text();
+    document.getElementsByTagName("head")[0].append(head);
     
-    const headerHtml = await (await fetch(`${rootPath}header.html`)).text();
+    const headerHtml = await (await fetch(`header.html`)).text();
     document.getElementById("header").innerHTML = headerHtml;
 
     linkStylesheet(`style.css`);
