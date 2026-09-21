@@ -2,7 +2,7 @@ build();
 
 async function build() {
     
-    const templateFetch = await fetch("Templates/projectGridEntryTemplate.html");
+    const templateFetch = await fetch("Templates/projectGridEntry.html");
     const template = await templateFetch.text();
     
     const projectsFetch = await fetch("Content/Projects.json");
@@ -23,15 +23,20 @@ async function build() {
 async function displayProject(project, template) {
     
     const [path, data] = project;
+    
+    const projectPagePath = `Content/${path}/index.html`;
 
     const cardContainer = document.createElement("div");
     cardContainer.innerHTML = template;
 
-    const logo = cardContainer.querySelector(".logo");
-    logo.setAttribute("src", `Content/${path}/Logo.png`);
+    const logoLink = cardContainer.querySelector(".logo");
+    logoLink.setAttribute("href", projectPagePath)
+
+    const logoImg = cardContainer.querySelector(".logo img");
+    logoImg.setAttribute("src", `Content/${path}/Logo.png`);
     
     if (data.landingPageLogoOffset) {
-        logo.style.setProperty("--logo-top-offset", `${data.landingPageLogoOffset}px`);
+        logoLink.style.setProperty("--logo-top-offset", `${data.landingPageLogoOffset}px`);
     }
 
     cardContainer.querySelector(".background").setAttribute("src", `Content/${path}/Thumbnail1.4.png`);
@@ -64,6 +69,9 @@ async function displayProject(project, template) {
         value.innerHTML = stat.value;
         statValues.appendChild(value);
     }
+
+    const learnMore = cardContainer.querySelector("#learn-more");
+    learnMore.setAttribute("href", projectPagePath);
     
     // addSteamEmbed("#game-embed", project.steamAppId, null);
     // addSteamEmbed("#demo-embed", project.steamDemoAppId, project.demoDescription);

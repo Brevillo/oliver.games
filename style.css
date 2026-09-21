@@ -29,6 +29,18 @@
     text-decoration: none;
 }
 
+a:visited,
+a:link,
+a {
+    transition: transform var(--transition-duration);
+    border-color: green;
+    border-width: 50px;
+}
+
+a:hover {
+    transform: translateY(-3px);
+}
+
 body {
     color:hsl(0, 0%, 100%);
     font-family: 'Figtree', sans-serif;
@@ -61,12 +73,6 @@ body {
     border-width: 0px;
     border-bottom-width: 2px;
     border-color: hsla(0, 0%, 100%, 80%);
-
-    transform-origin: bottom;
-
-    transition:
-        transform var(--transition-duration),
-        border-bottom-width var(--transition-duration);
 }
 
 .button.fill {
@@ -87,70 +93,10 @@ body {
 .button:hover,
 .button:visited:hover {
     background-color: var(--primary-color-hover);
-
-    transform: translate(0px, -3px);
-    border-bottom-width: 2px;
-}
-
-.button:active,
-.button:visited:active {
-    background-color: rgb(71, 71, 71);
 }
 
 /* ------------ Header ------------ */
 
-.header {
-    background: linear-gradient(0deg, var(--primary-color), var(--primary-color-dark));
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 10px;
-}
-
-.header .name:link,
-.header .name:visited,
-.header .name {
-    font-size: 85px;
-    font-weight: 300;
-    font-style: normal;
-    margin-bottom: -20px;
-    color: white;
-}
-
-.header .name:visited:hover,
-.header .name:hover {
-    color: var(--primary-color);
-}
-
-.header .specific-roles {
-    font-size: 20px;
-}
-
-.header .link-buttons-list {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.external-link-button {
-    height: 50px;
-    width: 50px;
-    
-    background-color: white;
-    transition: width var(--transition-duration);    
-
-    mask-size: contain;
-    mask-repeat: no-repeat;
-    mask-position: center;
-
-    transition: transform var(--transition-duration);
-}
-
-.external-link-button:hover {
-    background-color: var(--primary-color-dark);
-    transform: translate(0px, -3px);
-}
 
 /* ------------ Introduction ------------ */
 
@@ -199,137 +145,4 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 20px;
-}
-
-.project-grid-entry {
-    
-    background-color: var(--primary-color);
-    
-    height: 560px;
-    width: 400px;
-
-    position: relative;
-    overflow: hidden;
-
-    transition: width var(--transition-duration);
-
-    border-radius: 5px;
-
-    box-shadow: 0px 0px 0px #f63068;
-
-    transition:
-        translate var(--transition-duration),
-        box-shadow var(--transition-duration);
-}
-
-.project-grid-entry:hover {
-    box-shadow: 0px 0px 10px #f63068;
-}
-
-/* --- Background --- */
-
-.project-grid-entry .background {
-    width: 100%;
-    height: 100%;
-
-    transition: transform var(--transition-duration-2);
-}
-
-.project-grid-entry:hover > .background {
-    transform: scale(1.05);
-}
-
-/* --- Logo --- */
-
-.project-grid-entry .logo {
-    
-    --logo-top-offset: 50px;
-
-    position: absolute;
-    width: 95%;
-    top: var(--logo-top-offset);
-    left: 50%;
-    transform: translateX(-50%);
-    justify-self: center;
-
-    transition: top var(--transition-duration-2)
-}
-
-.project-grid-entry:hover > .logo {
-    top: calc(var(--logo-top-offset) - 10px);
-}
-
-/* --- Hover Info --- */
-
-.project-grid-entry .hover-info {
-    
-    opacity: 0%;
-
-    background-image: var(--darken);
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    
-    display: flex;
-    gap: 10px;
-    
-    padding: 20px;
-    
-    flex-direction: column;
-    text-align: center;
-    justify-content: flex-end;
-    
-    translate: 0px 30px;
-
-    transition:
-        opacity var(--transition-duration),
-        translate var(--transition-duration);
-}
-
-.project-grid-entry:hover > .hover-info {
-    opacity: 100%;
-    translate: 0px 0px;
-}
-
-/* --- Roles --- */
-
-.project-grid-entry .roles {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 10px
-}
-
-/* --- Stats --- */
-
-.project-grid-entry .stats {
-    display: flex;
-
-    background-color: hsla(0, 0%, 100%, 50%);
-
-    padding: 10px;
-    margin: 5px 0px;
-    
-    border-radius: 10px;
-    border-color: red;
-    border-width: 5px;
-}
-
-.project-grid-entry .stats div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.project-grid-entry .stats .names {
-    text-align: start;
-    width: 80px;
-}
-
-.project-grid-entry .stats .values {
-    text-align: end;
-    flex-grow: 1;
 }

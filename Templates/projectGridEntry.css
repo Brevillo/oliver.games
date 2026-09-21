@@ -1,0 +1,144 @@
+
+.project-grid-entry {
+    
+    background-color: var(--primary-color);
+    
+    height: 560px;
+    width: 400px;
+
+    position: relative;
+    overflow: hidden;
+
+    transition: width var(--transition-duration);
+
+    border-radius: 5px;
+
+    box-shadow: 0px 0px 0px #f63068;
+
+    transition:
+        translate var(--transition-duration),
+        box-shadow var(--transition-duration);
+}
+
+.project-grid-entry:hover {
+    box-shadow: 0px 0px 10px #f63068;
+}
+
+/* --- Background --- */
+
+.project-grid-entry .background {
+    width: 100%;
+    height: 100%;
+
+    transition: transform var(--transition-duration-2);
+}
+
+.project-grid-entry:hover > .background {
+    transform: scale(1.05);
+}
+
+/* --- Logo --- */
+
+.project-grid-entry .logo {
+    
+    --logo-top-offset: 50px;
+
+    display: block;
+
+    position: absolute;
+    width: 90%;
+    top: var(--logo-top-offset);
+    left: 15px;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    justify-self: center;
+
+    transition:
+        all var(--transition-duration);
+}
+
+.project-grid-entry .logo:hover {
+    /* transform-origin: center; */
+    transform: scale(1.05);
+    filter: brightness(110%);
+}
+
+.project-grid-entry .logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* --- Hover Info --- */
+
+.project-grid-entry .hover-info {
+    
+    opacity: 0%;
+
+    background-image: var(--darken);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    gap: 10px;
+    
+    padding: 20px;
+    
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-end;
+    
+    translate: 0px 30px;
+
+    transition:
+        opacity var(--transition-duration),
+        translate var(--transition-duration);
+}
+
+.project-grid-entry:hover > .hover-info {
+    opacity: 100%;
+    translate: 0px 0px;
+}
+
+/* --- Roles --- */
+
+.project-grid-entry .roles {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px
+}
+
+/* --- Stats --- */
+
+.project-grid-entry .stats {
+    display: flex;
+
+    background-color: hsla(0, 0%, 100%, 50%);
+
+    padding: 10px;
+    margin: 5px 0px;
+    
+    border-radius: 10px;
+    border-color: red;
+    border-width: 5px;
+}
+
+.project-grid-entry .stats div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.project-grid-entry .stats .names {
+    text-align: start;
+    width: 80px;
+}
+
+.project-grid-entry .stats .values {
+    text-align: end;
+    flex-grow: 1;
+}

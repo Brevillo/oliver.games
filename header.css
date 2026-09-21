@@ -1,0 +1,57 @@
+
+.header {
+    background: linear-gradient(0deg, var(--primary-color), var(--primary-color-dark));
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.header .header-content {
+    
+    display: flex;
+    flex-direction: column;
+    
+    width: fit-content;
+    gap: 15px;
+}
+
+.header .name:link,
+.header .name:visited,
+.header .name {
+    font-size: 85px;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: -20px;
+    color: white;
+}
+
+.header .name:visited:hover,
+.header .name:hover {
+    color: var(--primary-color);
+}
+
+.header .specific-roles {
+    font-size: 20px;
+}
+
+.header .link-buttons-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.external-link-button {
+    height: 45px;
+    width: 45px;
+    
+    background-color: white;
+
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+}
+
+.external-link-button:hover {
+    background-color: var(--primary-color-dark);
+}
