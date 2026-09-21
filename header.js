@@ -12,8 +12,8 @@ async function build() {
     const headerHtml = await (await fetch(`${rootPath}header.html`)).text();
     document.getElementById("header").innerHTML = headerHtml;
 
-    linkStylesheet(`${rootPath}style.css`);
-    linkStylesheet(`${rootPath}header.css`);
+    linkStylesheet(`style.css`);
+    linkStylesheet(`header.css`);
 
 }
 

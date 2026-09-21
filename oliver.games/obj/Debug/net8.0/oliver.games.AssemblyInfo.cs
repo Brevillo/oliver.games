@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("oliver.games")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1475cc9d7695caae5dfac558b1aae5009ac7e9f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4962362327c156c501c144027e5b6a90ade35d44")]
 [assembly: System.Reflection.AssemblyProductAttribute("oliver.games")]
 [assembly: System.Reflection.AssemblyTitleAttribute("oliver.games")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
