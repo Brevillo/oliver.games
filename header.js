@@ -1,12 +1,14 @@
+const rootPath = document.currentScript.dataset.rootPath;
+
 build();
 
 async function build() {
     
-    const headerHtml = await (await fetch("/header.html")).text();
+    const headerHtml = await (await fetch(`${rootPath}header.html`)).text();
     document.getElementById("header").innerHTML = headerHtml;
 
-    linkStylesheet("/style.css");
-    linkStylesheet("/header.css");
+    linkStylesheet(`${rootPath}style.css`);
+    linkStylesheet(`${rootPath}header.css`);
 
 }
 
