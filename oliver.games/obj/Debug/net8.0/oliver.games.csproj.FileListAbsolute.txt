@@ -27,3 +27,4 @@
 /Users/oliverbeebe/Documents/GitHub/oliver.games/oliver.games/bin/Debug/net8.0/Newtonsoft.Json.dll
 /Users/oliverbeebe/Documents/GitHub/oliver.games/oliver.games/obj/Debug/net8.0/oliver.games.csproj.AssemblyReference.cache
 /Users/oliverbeebe/Documents/GitHub/oliver.games/oliver.games/obj/Debug/net8.0/oliver.g.7DB26CCF.Up2Date
+/Users/oliverbeebe/Documents/GitHub/oliver.games/oliver.games/bin/Debug/net8.0/Markdig.dll

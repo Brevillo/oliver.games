@@ -13,15 +13,13 @@
 
     border-radius: 5px;
 
-    box-shadow: 0px 0px 0px #f63068;
-
     transition:
         translate var(--transition-duration),
-        box-shadow var(--transition-duration);
+        var(--glow-hover-transition);
 }
 
 .project-grid-entry:hover {
-    box-shadow: 0px 0px 10px #f63068;
+    box-shadow: var(--glow-hover);
 }
 
 /* --- Background --- */

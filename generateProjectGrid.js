@@ -73,21 +73,5 @@ async function displayProject(project, template) {
     const learnMore = cardContainer.querySelector("#learn-more");
     learnMore.setAttribute("href", projectPagePath);
     
-    // addSteamEmbed("#game-embed", project.steamAppId, null);
-    // addSteamEmbed("#demo-embed", project.steamDemoAppId, project.demoDescription);
-
-     function addSteamEmbed(htmlId, appId, description) {
-        if (appId) {
-            cardContainer.querySelector(htmlId).innerHTML = `
-            <iframe 
-                src="https://store.steampowered.com/widget/${appId}/"
-                frameborder="0"
-                width="100%"
-                height="200px"
-            ></iframe>
-            `;
-        }
-     }
-
     document.querySelector("#project-grid").appendChild(cardContainer);
 }

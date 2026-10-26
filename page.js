@@ -11,7 +11,6 @@ async function build() {
 
     linkStylesheet(`style.css`);
     linkStylesheet(`header.css`);
-
 }
 
 function linkStylesheet(path) {
@@ -22,4 +21,15 @@ function linkStylesheet(path) {
     link.href = path;
     
     document.getElementsByTagName("head")[0].appendChild(link);
+}
+
+function addSteamEmbed(element, appId) {
+    element.innerHTML = `
+        <iframe 
+            src="https://store.steampowered.com/widget/${appId}/"
+            frameborder="0"
+            width="600px"
+            height="200px"
+        ></iframe>
+        `;
 }

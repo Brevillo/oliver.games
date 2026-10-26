@@ -29,5 +29,75 @@
             "value": "Unity, C#, Figma, Trello"
         }
     ],
-    "steamAppId": "3680510"
+    "steamAppId": "3680510",
+    "trailerYouTubeID": "DUQrNMhI0w0",
+    "projectDescription": "Sip Fisher is a first-person incremental fishing game that I made with some friends from school over the summer of 2025!",
+    "projectDecsriptionBullets": [
+        "We got nominated for the IGF Best Student Game award.",
+        "As of Sep. 2026, we've sold about 30k copies and grossed over $120k.",
+        "We'll be launching on Nintendo Switch in Oct. 2026."
+    ],
+    "contributions": [
+        {
+            "name": "Fishing Mechanic",
+            "skills": [ "UX", "Technical Design" ]
+        },
+        {
+            "name": "Dock Building",
+            "skills": [ "UX", "Technical Design" ]
+        },
+        {
+            "name": "Menus",
+            "skills": [ "UX", "Technical Design" ]
+        },
+        {
+            "name": "Interaction System",
+            "skills": [ "UX", "Technical Design" ]
+        },
+        {
+            "name": "Team Management",
+            "skills": [ "Production" ]
+        }
+    ],
+    "articles": [
+        {
+            "title": "Production",
+            "path": "Content/SipFisher/Production.md"
+        },
+        {
+            "title": "Dock Building",
+            "path": "Content/SipFisher/UX Design/Dock Building.md"
+        }
+    ],
+    "screenshots": [
+        {
+            "path": "Content/SipFisher/Screenshots/dockBuilding.jpg",
+            "description": "This is the dock building UI when a card has been selected."
+        },
+        {
+            "path": "Content/SipFisher/Screenshots/dockExample.jpg",
+            "description": "This is the kind of dock you can build with the dock building system."
+        },
+        {
+            "path": "Content/SipFisher/Screenshots/fishBucketJump.jpg"
+        },
+        {
+            "path": "Content/SipFisher/Screenshots/fishingCrazy.jpg"
+        },
+        {
+            "path": "Content/SipFisher/Screenshots/fishingNormal.jpg"
+        },
+        {
+            "path": "Content/SipFisher/Screenshots/fishJournal.jpg"
+        },
+        {
+            "path": "Content/SipFisher/Screenshots/shop.jpg"
+        },
+        {
+            "path": "Content/SipFisher/Screenshots/spookyCave.jpg"
+        },
+        {
+            "path": "Content/SipFisher/Screenshots/tutorial.jpg"
+        }
+    ]
 }

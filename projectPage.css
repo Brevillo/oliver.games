@@ -1,0 +1,52 @@
+#contributions {
+    width: 100%;
+}
+
+
+#trailer {
+    border-radius: 5px;
+}
+
+.description {
+    width: 500px;
+}
+
+#description-bullets {
+    padding: 20px;
+}
+
+.skills-list {
+    display: flex;
+    gap: 5px;
+}
+
+.contribution-element {
+    display: flex;
+    flex-direction: row;
+}
+
+.contribution-element span {
+    display: flex;
+    flex-grow: 1;
+}
+
+.horizontal-content {
+    display: flex;
+
+    flex-direction: row;
+}
+
+.image-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    scroll-behavior: smooth;
+    /* overflow-x: scroll; */
+    gap: 15px;
+}
+
+.image-carousel img {
+    width: 32%;
+    scroll-snap-align: start;
+}

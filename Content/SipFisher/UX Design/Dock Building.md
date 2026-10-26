@@ -18,7 +18,7 @@ Being tasked with designing and implementing this mechanic, I started by just ma
 
 I knew the size of the dock would be really important since the player would be walking around on them in first person for most of the game, but without any game context yet, I had to pick an arbitrary size just to get things moving.
 
-## Fist pass at dock building
+## First pass at dock building
 
 Once I had the pieces, I set up a simple interaction where the player could click a toolbox to enter a building mode and choose to build one of three pieces.
 

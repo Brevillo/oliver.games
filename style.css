@@ -9,6 +9,12 @@
     
     --primary-color-bright: white;
 
+    --primary-font-color: hsl(0, 0%, 90%);
+    
+    
+    --note-background-color: hsl(0, 0%, 10%);
+    --note-font-color: hsl(0, 0%, 60%);
+
     --darken: linear-gradient(
         to top,
         hsla(253, 100%, 5%, 90%),
@@ -17,6 +23,9 @@
 
     --transition-duration: 0.2s;
     --transition-duration-2: 0.35s;
+
+    --glow-hover: 0px 0px 10px var(--primary-color);
+    --glow-hover-transition: box-shadow 0.1s;
 }
 
 * {
@@ -42,10 +51,39 @@ a:hover {
 }
 
 body {
-    color:hsl(0, 0%, 100%);
+    color: var(--primary-font-color);
     font-family: 'Figtree', sans-serif;
 
     background-color: black;
+}
+
+.note {
+    color: var(--note-font-color);
+    font-style: italic;
+    font-size: larger;
+    text-align: center;
+
+    background-color: var(--note-background-color);
+    padding: 0.5em;
+    border-radius: 10px;
+}
+
+/* ------------ Page ------------ */
+
+.page {
+    width: fit-content;
+    margin: 20px auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.page.article {
+    width: 1200px;
 }
 
 /* ------------ Button ------------ */
@@ -60,15 +98,15 @@ body {
     justify-content: center;
 
     background-color: var(--primary-color);
-    color: white;
+    color: var(--primary-font-color);
     
     width: fit-content;
     height: fit-content;
-    padding: 5px 8px;
+    padding: 5px 12px;
 
     position: relative;
 
-    border-radius: 6px;
+    border-radius: 20px;
     border-style: solid;
     border-width: 0px;
     border-bottom-width: 2px;
@@ -95,22 +133,7 @@ body {
     background-color: var(--primary-color-hover);
 }
 
-/* ------------ Header ------------ */
-
-
 /* ------------ Introduction ------------ */
-
-.page {
-    width: fit-content;
-    margin: 20px auto;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    gap: 20px;
-}
 
 .introduction {
     background-color:
