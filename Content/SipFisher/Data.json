@@ -1,5 +1,6 @@
 {
     "name": "Sip Fisher",
+    "bannerImage": "Content/SipFisher/Banner.png",
     "roles": [
         {
             "title": "UX Lead",
@@ -13,6 +14,28 @@
             "title": "Producer",
             "page": ""
         }        
+    ],
+    "infoNuggets": [
+        {
+            "label": "Genre",
+            "value": "Cozy First Person Fishing Game"
+        },
+        {
+            "label": "Engine",
+            "value": "Unity"
+        },
+        {
+            "label": "Tools",
+            "value": "Figma, Trello"
+        },
+        {
+            "label": "Duration",
+            "value": "May 2025 - August 2025"
+        },
+        {
+            "label": "Team Size",
+            "value": "8 People"
+        }
     ],
     "funFacts": "30k Copies Sold & IGF Finalist",
     "stats": [
@@ -37,6 +60,7 @@
         "As of Sep. 2026, we've sold about 30k copies and grossed over $120k.",
         "We'll be launching on Nintendo Switch in Oct. 2026."
     ],
+    "aboutTheProjectArticle": "Content/SipFisher/About The Project.md",
     "contributions": [
         {
             "name": "Fishing Mechanic",

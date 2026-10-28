@@ -1,32 +1,57 @@
+:root {
+    --header-gradient: linear-gradient(0deg, var(--primary-color), var(--primary-color-dark));
 
-.header {
-    background: linear-gradient(0deg, var(--primary-color), var(--primary-color-dark));
+    --header-image-cover: linear-gradient(180deg,
+        color-mix(in hsl, var(--primary-color-dark) 80%, rgba(0, 0, 0, 0))
+        ,
+        color-mix(in hsl, var(--primary-color-dark) 80%, rgba(0, 0, 0, 0))
+        );
+}
+
+#header {
+    width: 100%;
+}
+
+#header-content {
+    background: var(--header-gradient);
+    background-size: cover;
+    width: 100%;
+
+    background-position: center;
+
     display: flex;
     justify-content: center;
-    padding: 10px;
+
+}
+
+.center {
+    backdrop-filter: blur(2px);
+    mask: linear-gradient(
+        to right,
+        transparent,
+        white 30%,
+        white 70%,
+        transparent
+    );
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+
+    width: fit-content;
+
+    padding: 20px 15%;
 }
 
 #resume {
     position: absolute;
     right: 10px;
-
-
 }
 
-
-
-.header .header-content {
-    
-    display: flex;
-    flex-direction: column;
-    
-    width: fit-content;
-    gap: 15px;
-}
-
-.header .name:link,
-.header .name:visited,
-.header .name {
+.name:link,
+.name:visited,
+.name {
     font-size: 85px;
     font-weight: 300;
     font-style: normal;
@@ -34,20 +59,21 @@
     color: white;
 }
 
-.header .name:visited:hover,
-.header .name:hover {
+.name:visited:hover,
+.name:hover {
     color: var(--primary-color);
 }
 
-.header .specific-roles {
+.specific-roles {
     font-size: 20px;
 }
 
-.header .link-buttons-list {
+.link-buttons-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-grow: 1;
+
+    gap: 20px;
 }
 
 .external-link-button {

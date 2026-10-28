@@ -1,40 +1,101 @@
-#contributions {
-    width: 100%;
+
+:root {
+    --background-color:  #1e1e1e;
 }
 
+.box {
+    background-color: var(--background-color);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.horizontal-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
 
 #trailer {
     border-radius: 5px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
-.description {
-    width: 500px;
+#description {
+    width: 100%;
+}
+
+#long-description {
+    width: 800px;
 }
 
 #description-bullets {
     padding: 20px;
 }
 
-.skills-list {
-    display: flex;
-    gap: 5px;
+/* ------------ Contributions ------------ */
+
+#contributions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
 }
 
 .contribution-element {
+    background-color: var(--background-color);
     display: flex;
     flex-direction: row;
+    position: relative;
+
+    height: 3em;
+    border-radius: 10px;
 }
 
-.contribution-element span {
+.contribution-cover {
+    background: linear-gradient(90deg, rgb(98, 235, 146), rgb(0, 157, 255));
+    filter: saturate(1);
+
+    color: black;
+    font-size: larger;
+    font-weight: 800;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
     display: flex;
-    flex-grow: 1;
+    align-items: center;
+    padding: 1em;
+    border-radius: 10px;
+
+    transition:
+        width var(--transition-duration),
+        filter var(--transition-duration);
 }
 
-.horizontal-content {
-    display: flex;
+.contribution-element:hover > .contribution-cover {
+    width: 50%;
+    filter: saturate(0);
+}
 
+.skills-list {
+    display: flex;
+    
+    width: 100%;
+    height: 100%;
+    
     flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    
+    gap: 5px;
+    padding: 1em;
 }
+
+/* ------------ Images ------------ */
 
 .image-carousel {
     display: flex;
@@ -49,4 +110,29 @@
 .image-carousel img {
     width: 32%;
     scroll-snap-align: start;
+}   
+
+/* ------------ Info Nuggets ------------ */
+
+#info-nuggets {
+    width: 300px;
+}
+
+.info-nugget {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    border-width: 0;
+    border-bottom-width: 1px;
+    border-color: white;
+    border-style: solid;
+
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.info-nugget-label {
+    display: flex;
+    flex-grow: 1;
 }

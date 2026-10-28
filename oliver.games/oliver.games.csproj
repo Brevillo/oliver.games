@@ -9,6 +9,7 @@
     <ItemGroup>
       <PackageReference Include="Markdig" Version="1.5.0" />
       <PackageReference Include="Newtonsoft.Json" Version="14.0.1-beta2" />
+      <PackageReference Include="showdownjs" Version="2.0.3" />
     </ItemGroup>
 
 </Project>

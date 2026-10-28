@@ -1,5 +1,7 @@
 .lightboxable {
     cursor: zoom-in;
+    width: auto;
+    height: auto;
 
     transition: var(--glow-hover-transition);
 }

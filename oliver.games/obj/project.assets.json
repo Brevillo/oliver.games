@@ -27,6 +27,9 @@
             "related": ".xml"
           }
         }
+      },
+      "showdownjs/2.0.3": {
+        "type": "package"
       }
     }
   },
@@ -83,12 +86,26 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
+    },
+    "showdownjs/2.0.3": {
+      "sha512": "usoZk8eNg4kKaeM07GF7Bigoxmu6ye+R452qZ/WIubRAOCNqL2l3lqu7gLlNkpZ4wMagSzanTZ8oZijDDV+RiA==",
+      "type": "package",
+      "path": "showdownjs/2.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/Scripts/showdown.js",
+        "content/Scripts/showdown.min.js",
+        "showdownjs.2.0.3.nupkg.sha512",
+        "showdownjs.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Markdig >= 1.5.0",
-      "Newtonsoft.Json >= 14.0.1-beta2"
+      "Newtonsoft.Json >= 14.0.1-beta2",
+      "showdownjs >= 2.0.3"
     ]
   },
   "packageFolders": {
@@ -114,7 +131,6 @@
       },
       "frameworks": {
         "net8.0": {
-          "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {}
         }
@@ -132,7 +148,6 @@
     },
     "frameworks": {
       "net8.0": {
-        "framework": "net8.0",
         "targetAlias": "net8.0",
         "dependencies": {
           "Markdig": {
@@ -142,6 +157,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[14.0.1-beta2, )"
+          },
+          "showdownjs": {
+            "target": "Package",
+            "version": "[2.0.3, )"
           }
         },
         "imports": [

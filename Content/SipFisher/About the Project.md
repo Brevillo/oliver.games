@@ -1,5 +1,5 @@
-I was the project lead, UX designer, technical designer, and producer of our 8 person team. We put it together over the summer of 2025, starting April 21st and releasing on Steam on August 27th.
+The idea for what would eventually become Sip Fisher came about in early 2025 when a game called “A Game Digging a Hole” released. I was inspired by how popular it was despite its simplicity, and it felt like something I could achieve with friends.
 
-We've sold over 20k copies and grossed over 90k with a 94% positive review score on Steam!
+So in February, I started asking some friends if they would be interested in working on something like it over the summer. The team gradually grew into 8 people: 2 designers, 2 programers, 2 artists, a sound designer, and a user researcher.
 
-You can read about the project and my role on the team!
+Since we were all students at the time, we waited until finals week in May, and then got the project started.

@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="page.js"></script>
-        <script src="Templates/projectPage.js" data-project="SuperDuperSiege"></script>
-        <script src="lightbox.js"></script>
+        <script src="page.js" data-project="SuperDuperSiege"></script>
     </head>
     <body>
         <div id="header"></div>
         <div class="page article">
             <iframe id="trailer"
-                width="600"
-                height="340"
                 frameborder="0"
-                src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                src="https://www.youtube-nocookie.com/embed/tgbNymZ7vqY">
             </iframe>
-            <div class="description">
-                <div id="description">Description</div>
-                <ul id="description-bullets"></ul>
-            </div>
             <div class="horizontal-content">
-                <div id="steam-embed">steam link</div>
-                <div id="awards"></div>
+                <div class="description box">
+                    <div id="description">Description</div>
+                    <ul id="description-bullets"></ul>
+                </div>
+                <div class="box">
+                    <div id="info-nuggets"></div>
+                    <div id="awards"></div>
+                </div>
             </div>
-            <div class=""></div>
+            <div class="box" style="width: 100%;">
+                <div id="steam-embed">steam link</div>
+            </div>
             <h1>My Contributions</h1>
             <div id="contributions"></div>
             <h1>About the Project</h1>
             <div class="image-carousel" id="screenshots"></div>
-            <div class="horizontal-content">
-                <p></p>
+            <div class="box">
+                <p id="long-description"></p>
             </div>
         </div>
     </body>

@@ -68,6 +68,12 @@ body {
     border-radius: 10px;
 }
 
+.non-selectable {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
 /* ------------ Page ------------ */
 
 .page {
@@ -83,7 +89,7 @@ body {
 }
 
 .page.article {
-    width: 1200px;
+    width: 800px;
 }
 
 /* ------------ Button ------------ */
@@ -150,11 +156,8 @@ body {
 }
 
 .introduction div {
-    width: 230px;
+    width: 340px;
     gap: 10px;
-
-    display: flex;
-    flex-direction: column;
 }
 
 .introduction img {
@@ -168,4 +171,12 @@ body {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 20px;
+}
+
+/* ------------ Articles ------------ */
+
+p {
+    padding-bottom: 1em;
+
+    font-size: larger;
 }

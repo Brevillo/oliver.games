@@ -1,6 +1,6 @@
-build();
+buildProjectGrid();
 
-async function build() {
+async function buildProjectGrid() {
     
     const templateFetch = await fetch("Templates/projectGridEntry.html");
     const template = await templateFetch.text();
@@ -59,7 +59,7 @@ async function displayProject(project, template) {
     const statNames = statsGrid.querySelector(".names");
     const statValues = statsGrid.querySelector(".values");
 
-    for (let stat of data.stats) {
+    for (const stat of data.stats) {
         
         const name = document.createElement("div");
         name.innerHTML = stat.name;

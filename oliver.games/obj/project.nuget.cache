@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "gAhhHiCZYp0=",
+  "dgSpecHash": "Qg4nkFGy7IIHLQWNWzsZpqG5ZC1LNseblg7BaMiWS0qsBxqACvOn49ycQv01TBqS5cnM9nagZdnf+OC8NNgC0Q==",
   "success": true,
   "projectFilePath": "/Users/oliverbeebe/Documents/GitHub/oliver.games/oliver.games/oliver.games.csproj",
   "expectedPackageFiles": [
     "/Users/oliverbeebe/.nuget/packages/markdig/1.5.0/markdig.1.5.0.nupkg.sha512",
-    "/Users/oliverbeebe/.nuget/packages/newtonsoft.json/14.0.1-beta2/newtonsoft.json.14.0.1-beta2.nupkg.sha512"
+    "/Users/oliverbeebe/.nuget/packages/newtonsoft.json/14.0.1-beta2/newtonsoft.json.14.0.1-beta2.nupkg.sha512",
+    "/Users/oliverbeebe/.nuget/packages/showdownjs/2.0.3/showdownjs.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

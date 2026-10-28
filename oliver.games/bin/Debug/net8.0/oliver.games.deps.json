@@ -9,7 +9,8 @@
       "oliver.games/1.0.0": {
         "dependencies": {
           "Markdig": "1.5.0",
-          "Newtonsoft.Json": "14.0.1-beta2"
+          "Newtonsoft.Json": "14.0.1-beta2",
+          "showdownjs": "2.0.3"
         },
         "runtime": {
           "oliver.games.dll": {}
@@ -30,7 +31,8 @@
             "fileVersion": "14.0.1.32121"
           }
         }
-      }
+      },
+      "showdownjs/2.0.3": {}
     }
   },
   "libraries": {
@@ -52,6 +54,13 @@
       "sha512": "sha512-zl99ylHjMLPtVbVLeBB0C1VP3N4rXeNQaStErKeRwtZLXRUTWEOdW8rUulBKOwmahdIK1NHAYPZlaBKYZSYccw==",
       "path": "newtonsoft.json/14.0.1-beta2",
       "hashPath": "newtonsoft.json.14.0.1-beta2.nupkg.sha512"
+    },
+    "showdownjs/2.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-usoZk8eNg4kKaeM07GF7Bigoxmu6ye+R452qZ/WIubRAOCNqL2l3lqu7gLlNkpZ4wMagSzanTZ8oZijDDV+RiA==",
+      "path": "showdownjs/2.0.3",
+      "hashPath": "showdownjs.2.0.3.nupkg.sha512"
     }
   }
 }
