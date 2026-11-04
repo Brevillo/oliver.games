@@ -33,26 +33,30 @@ internal class Project(string name)
         foreach (var article in articles)
         {
             string articleTitle = article.Value<string>("title");
-            string articleMarkdown = File.ReadAllText($"../{article.Value<string>("path")}");
+            string markdownPath = article.Value<string>("path");
 
-            string articleHtml = Markdown.ToHtml(articleMarkdown);
+            string pageHtml = File.ReadAllText($"../Templates/articlePage.html");
 
-            string directory = $"../{name}/";
+            pageHtml = SetData(pageHtml, "data-article", markdownPath);
+            pageHtml = SetData(pageHtml, "data-project", name);
 
-            Directory.CreateDirectory(directory);
-            File.WriteAllText($"{directory}{articleTitle}.html", articleHtml);
+            File.WriteAllText($"../{name}-{articleTitle}.html", pageHtml);
         }
-        
-        // File.WriteAllText();
     }
 
     private void GenerateProjectPage()
     {
-        string pageHtml = File.ReadAllText($"../Templates/projectPage.html")
-            .Replace("data-project=\"\"", $"data-project=\"{name}\"");
+        string pageHtml = File.ReadAllText($"../Templates/projectPage.html");
+
+        pageHtml = SetData(pageHtml, "data-project", name);
 
         File.WriteAllText($"../{name}.html", pageHtml);
     }
 
     public override string ToString() => $"{name}\n{json}";
+
+    private string SetData(string html, string dataName, string content)
+    {
+        return html.Replace($"{dataName}=\"\"", $"{dataName}=\"{content}\"");
+    }
 }
