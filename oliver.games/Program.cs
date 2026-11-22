@@ -32,7 +32,7 @@ internal class Project(string name)
 
         foreach (var article in articles)
         {
-            string articleTitle = article.Value<string>("title");
+            string articlePage = article.Value<string>("page");
             string markdownPath = article.Value<string>("path");
 
             string pageHtml = File.ReadAllText($"../Templates/articlePage.html");
@@ -40,7 +40,7 @@ internal class Project(string name)
             pageHtml = SetData(pageHtml, "data-article", markdownPath);
             pageHtml = SetData(pageHtml, "data-project", name);
 
-            File.WriteAllText($"../{name}-{articleTitle}.html", pageHtml);
+            File.WriteAllText($"../{name}-{articlePage}.html", pageHtml);
         }
     }
 

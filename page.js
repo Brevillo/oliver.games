@@ -21,16 +21,15 @@ async function build() {
 
     const projectData = project ? await (await fetch(`Content/${project}/Data.json`)).json() : null;
 
-    if (projectData && !article) {
-        buildProjectPage(project, projectData);
+    if (projectData) {
+        await buildProjectPage(project, projectData);
     }
 
     if (article) {
-        console.log("yes article is real");
-        buildArticlePage(project, projectData, article);
+        await buildArticlePage(project, projectData, article);
     }
 
-    buildLightbox();
+    await buildLightbox();
 }
 
 function linkStylesheet(path) {
@@ -54,7 +53,7 @@ function addSteamEmbed(element, appId) {
         `;
 }
 
-function mdToHtml(md) {
+function mdToArticleHtml(md) {
     return new showdown.Converter().makeHtml(md);
 }
 
@@ -72,15 +71,15 @@ async function buildProjectPage(project, projectData) {
 
     // Trailer
     const trailer = document.getElementById("trailer");
-    if (projectData.trailerYouTubeID) {
+    if (trailer && projectData.trailerYouTubeID) {
         trailer.setAttribute("src", `https://www.youtube.com/embed/${projectData.trailerYouTubeID}`);
-    } else {
+    } else if (trailer) {
         trailer.style.display = "none";
     }
 
     // Description and Description Bullets
     const description = document.getElementById("description");
-    if (projectData.projectDescription) {
+    if (description && projectData.projectDescription) {
         description.innerHTML = projectData.projectDescription;
 
         const descriptionBullets = document.getElementById("description-bullets");
@@ -94,21 +93,21 @@ async function buildProjectPage(project, projectData) {
             descriptionBullets.style.display = "none";
         }
 
-    } else { 
+    } else if (description) { 
         description.style.display = "none";
     }
 
     // Steam embed
     const steamEmbed = document.getElementById("steam-embed");
-    if (projectData.steamAppId) {
+    if (steamEmbed && projectData.steamAppId) {
         addSteamEmbed(steamEmbed, projectData.steamAppId);
-    } else {
+    } else if (steamEmbed) {
         steamEmbed.style.display = "none";
     }
 
     // Contributions
     const contributions = document.getElementById("contributions");
-    if (projectData.contributions) {
+    if (contributions && projectData.contributions) {
 
         for (const contribution of projectData.contributions) {
         
@@ -124,14 +123,13 @@ async function buildProjectPage(project, projectData) {
 
             contributions.append(li);
         }
-    } else {
+    } else if (contributions) {
         contributions.style.display = "none";
     }
     
     // Screenshots
-    if (projectData.screenshots) {
-
-        const screenshots = document.getElementById("screenshots");
+    const screenshots = document.getElementById("screenshots");
+    if (screenshots && projectData.screenshots) {
 
         for (const screenshot of projectData.screenshots) {
             
@@ -144,20 +142,24 @@ async function buildProjectPage(project, projectData) {
             
             screenshots.appendChild(screenshotHolder);
         }
+    } else if (screenshots) {
+        screenshots.style.display = "none";
     }
 
     // About the Project
-    if (projectData.aboutTheProjectArticle) {
-        const aboutTheProjectContainer = document.getElementById("long-description");
+    const aboutTheProjectContainer = document.getElementById("long-description");
+    if (aboutTheProjectContainer && projectData.aboutTheProjectArticle) {
         
         const aboutTheProjectMd = await (await fetch(projectData.aboutTheProjectArticle)).text();
 
-        aboutTheProjectContainer.innerHTML = mdToHtml(aboutTheProjectMd);
+        aboutTheProjectContainer.innerHTML = mdToArticleHtml(aboutTheProjectMd);
+    } else if (aboutTheProjectContainer) {
+        aboutTheProjectContainer.style.display = "none";
     }
 
     // Info Nuggets
-    if (projectData.infoNuggets) {
-        const infoNuggetsContainer = document.getElementById("info-nuggets");
+    const infoNuggetsContainer = document.getElementById("info-nuggets");
+    if (infoNuggetsContainer && projectData.infoNuggets) {
 
         for (const infoNug of projectData.infoNuggets)
         {
@@ -171,32 +173,39 @@ async function buildProjectPage(project, projectData) {
 
             infoNuggetsContainer.appendChild(infoNugElement);
         }
+    } else if (infoNuggetsContainer) {
+        infoNuggetsContainer.style.display = "none";
     }
 
     // Article List
-    if (projectData.articles) {
-
-        console.log("building article list");
-        const articleList = document.getElementById("article-list");
+    const articleList = document.getElementById("article-list");
+    if (articleList && projectData.articles) {
 
         for (const article of projectData.articles) {
             const button = document.createElement("a");
             
             button.setAttribute("class", "button");
-            button.setAttribute("href", `${project}-${article.title}.html`);
+            button.setAttribute("href", `${project}-${article.page}.html`);
             button.innerHTML = article.title;
 
             articleList.append(button);
         }
+    } else if (articleList) {
+        articleList.style.display = "none";
     }
 }
 
 async function buildLightbox() {
 
-    const lightboxHtml = await (await fetch('lightbox.html')).text();
-
     const lightboxSystem = document.createElement("div");
-    lightboxSystem.innerHTML = lightboxHtml;
+
+    lightboxSystem.innerHTML = `
+        <dialog id="lightbox">
+            <figure>
+                <img id="lightbox-display" tabindex="-1">
+                <figcaption id="lightbox-caption" class="note"></figcaption>
+            </figure>
+        </dialog>`;
 
     document.getElementsByTagName("body")[0].append(lightboxSystem);
 
@@ -208,7 +217,10 @@ async function buildLightbox() {
 
     lightboxContainer.addEventListener("click", () => lightboxContainer.close());
 
+    console.log("finding lightboxables");
     document.querySelectorAll(".lightboxable").forEach((img) => {
+
+        console.log(img.innerHTML);
 
         img.setAttribute("tabindex", 0);
 
@@ -223,14 +235,21 @@ async function buildLightbox() {
 
 async function buildArticlePage(project, projectData, article) {
 
+    linkStylesheet(`articlePage.css`);
+
     const articleContent = document.getElementById("article-content");
     
     const md = await (await fetch(article)).text();
 
-    articleContent.innerHTML = mdToHtml(md);
+    articleContent.innerHTML = mdToArticleHtml(md);
 
     for (const button of document.getElementsByClassName("return-to-project")) {
         button.setAttribute("href", `${project}.html`);
         button.innerHTML = `Return to ${projectData.name}`;
+    }
+
+    for (const image of articleContent.querySelectorAll("img")) {
+        console.log('found an image');
+        image.setAttribute("class", "lightboxable");
     }
 }

@@ -36,6 +36,7 @@
     transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
 
     text-decoration: none;
+    line-height: 1.5;
 }
 
 a:visited,
@@ -88,7 +89,7 @@ body {
     gap: 20px;
 }
 
-.page.article {
+.page.content {
     width: 800px;
 }
 

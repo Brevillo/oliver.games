@@ -86,11 +86,13 @@
     "articles": [
         {
             "title": "Production",
+            "page": "Production",
             "path": "Content/SipFisher/Production.md"
         },
         {
             "title": "Dock Building",
-            "path": "Content/SipFisher/UX Design/Dock Building.md"
+            "page": "DockBuilding",
+            "path": "Content/SipFisher/UX/DockBuilding/DockBuilding.md"
         }
     ],
     "screenshots": [

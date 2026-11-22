@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Content/SipFisher/About the Project.md",
+                "file": "Content/SipFisher/UX/DockBuilding/DockBuilding.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "About the Project"
+              "title": "DockBuilding"
             }
           }
         ]
@@ -99,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Content/SipFisher/UX Design/Dock Building.md",
+                "file": "Content/SipFisher/UX/DockBuilding/DockBuilding.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -190,8 +190,19 @@
   },
   "active": "b71e7d9f18b9bdce",
   "lastOpenFiles": [
-    "Content/SipFisher/Logo.png",
+    "Content/SipFisher/UX/Fish Sipping.md",
+    "Content/SipFisher/UX/DockBuilding/DockBuilding.md",
+    "Content/SipFisher/UX/DockBuilding/dock_building_final.gif",
+    "Content/SipFisher/UX/DockBuilding/Screen Recording 2026-11-04 at 4.07.30 PM.gif",
+    "Content/SipFisher/UX/DockBuilding/dock_pack.png",
+    "Content/SipFisher/UX/DockBuilding/dock_early.png",
+    "Content/SipFisher/UX/DockBuilding/dock_cards_polished.png",
+    "Content/SipFisher/UX/DockBuilding/dock_building_spam.gif",
+    "Content/SipFisher/UX/DockBuilding/dock_building_movement.gif",
+    "Content/SipFisher/UX/DockBuilding/dock_building.gif",
+    "Content/SipFisher/UX/DockBuilding/dock_branchng.png",
     "Content/SipFisher/About the Project.md",
+    "Content/SipFisher/Logo.png",
     "Content/SipFisher/UX Design.md",
     "Content/SipFisher/UX Design/Dock Building.md",
     "projectPage.css",

@@ -1,0 +1,14 @@
+.article img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+#article-content {
+    display: flex;
+    flex-direction: column;
+    /* width: 600px; */
+
+    font-size: larger;
+}
