@@ -1,6 +1,6 @@
 As the lake is drained, the player needs a way to continue sipping fish, and so I created our dock building system.
 
-![the alternative text](/Content/SipFisher/UX/DockBuilding/dock_building_final.gif)
+![the alternative text](Content/SipFisher/UX/DockBuilding/dock_building_final.gif)
 
 # Dock Building Design Process
 
