@@ -18,7 +18,7 @@ Being tasked with designing and implementing this mechanic, I started by just ma
 
 I knew the size of the dock would be really important since the player would be walking around on them in first person for most of the game, but without any game context yet, I had to pick an arbitrary size just to get things moving.
 
-![](/Content/SipFisher/UX/DockBuilding/dock_early.png)
+![](Content/SipFisher/UX/DockBuilding/dock_early.png)
 
 ## First pass at dock building
 
@@ -28,7 +28,7 @@ Early on, I thought treating the dock pieces as cards could be a really good int
 
 In this video, you can see my fist iteration of the dock placing menu. The general structure actually persisted to the final product, namely the card selection, close (cancel) button, and the ghost preview of the selected dock piece.
 
-![](/Content/SipFisher/UX/DockBuilding/dock_building.gif)
+![](Content/SipFisher/UX/DockBuilding/dock_building.gif)
 
 This iteration already worked pretty well for building the dock , although the rotate and confirm sub menu after clicking a card was a bit awkward since the UI is hidden until you enter that state. There was also an issue that you had to click the toolbox to place a new piece, which meant looking away from where you were trying to place a toolbox.
 
@@ -38,7 +38,7 @@ These are all issues I would work on fixing in later iterations.
 
 In this iteration, I added functionality for automatically moving the player to the ideal position to view their newly placed dock pieces.
 
-![](/Content/SipFisher/UX/DockBuilding/dock_building_movement.gif)
+![](Content/SipFisher/UX/DockBuilding/dock_building_movement.gif)
 
 This helped a lot with the readability of the mechanic, and had the nice side effect of making the game feel a bit more efficient since the the dock building interaction can pull you forward from a distance as you walk up to it.
 
@@ -48,11 +48,11 @@ This really highlighted another issue though - when the player is trying to buil
 
 As I mentioned earlier, the confirmation/rotation sub menu was quite awkward. This video shows a fun side effect of the positioning of the confirmation button. It's an accident I would have been inclined to leave in the game, however the position of the button meant it was only possible for cards that happened to align with the sub menu button, so I wanted to find something better.
 
-![](/Content/SipFisher/UX/DockBuilding/dock_building_spam.gif)
+![](Content/SipFisher/UX/DockBuilding/dock_building_spam.gif)
 
 What I went with was turning the card itself into the confirmation button. When a card is selected by the player, it rises up to indicate selection, and then can be clicked a again to confirm. This gives the fun speed-bridging behavior from rapidly clicking, while making it work for every card. Turning the card into the confirm button also worked beautifully to signify when the card can be selected but not placed due to blocking level geometry (shown in the video as the red X over the card and the piece highlight turning red).
 
-![](/Content/SipFisher/UX/DockBuilding/dock_building_blocking.gif)
+![](Content/SipFisher/UX/DockBuilding/dock_building_blocking.gif)
 
 Moving the card up also gave me the idea of hiding the deselect button under each card, something which intuitively ties the action to that card. This also gave me the idea to tuck the rotate button underneath the cards as well. This makes it intuitively only show for the card for which its relevant (the turn piece, and later intersection piece). 
 
@@ -66,7 +66,7 @@ These iterations also show the first view of the dock piece cards, which I'll go
 
 Something that became more and more important as we began to understand the level design of the game was that we wanted to allow the player to build branching dock pathways. This would allow us to have little ponds emerge as you drain the lake that the player could branch over to as a form of exploration beyond just going down the lake.
 
-![](/Content/SipFisher/UX/DockBuilding/dock_branchng.png)
+![](Content/SipFisher/UX/DockBuilding/dock_branchng.png)
 
 This mechanic required a lot of refactoring, especially with my save system, since the dock was no longer a single list of pieces. Thankfully,  the UX design I had already done for the dock building system mostly held up to this new requirement.
 
@@ -90,7 +90,7 @@ I also continued my initial design of making the action cards (delete/undo) expl
 
 I designed all versions of the cards using Figma and by gathering screenshots of our 3D models in Unity.
 
-![](/Content/SipFisher/UX/DockBuilding/dock_pack.png)
+![](Content/SipFisher/UX/DockBuilding/dock_pack.png)
 
 ## Final state of dock building
 
@@ -98,7 +98,7 @@ Here you can see the state of dock building in the final game. I'm really proud 
 
 It's also a really great showcase of the cohesion between our disciplines, bringing together my programming and design with the excellent sound design and 3D art of my teammates.
 
-![](/Content/SipFisher/UX/DockBuilding/dock_building_final.gif)
+![]( Content/SipFisher/UX/DockBuilding/dock_building_final.gif)
 
 Small UX improvements I made throughout the project.
 
